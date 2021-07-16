@@ -84,11 +84,13 @@ display_calendar(const char calendar_array[CALENDAR_SIZE][TIME_STR_SIZE],
     struct  tm *tm_data = localtime(&time_now);
 
     strftime(current_day, 6, "%m-%d", tm_data);
-    strftime(current_date, 11, "%d/%m-%Y", tm_data);
-    strftime(current_time, 6, "%H:%M", tm_data);
+    strftime(current_date, 11, "%d-%m-%Y", tm_data);
+    strftime(current_time, 6, "%I:%M", tm_data);
 
-    printf("\nDate today %s\n\n", current_date);
-    printf("---------------------\n");
+    printf("---------------------");
+    printf("\nDate today: %s", current_date);
+    printf("\nTime right now: %s", current_time);
+    printf("\n---------------------\n");
 
     int i = 0;
 
@@ -114,14 +116,11 @@ display_calendar(const char calendar_array[CALENDAR_SIZE][TIME_STR_SIZE],
             printf("Isha:\t\t%s\n", g_converted_time_string);
         }
     }
-
-    printf("---------------------\n\n");
-    printf("Time is now: \t%s\n\n", current_time);
 }
 
 /*
  * A small command line application that displays the Islamic prayer times for
- * Copenhagen, Denmark.
+ * your city (default: Copenhagen, Denmark).
  */
 int
 main(int argc, char *argv[])

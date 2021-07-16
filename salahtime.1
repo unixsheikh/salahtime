@@ -9,15 +9,25 @@ salahtime \- displays the Islamic prayer time for Europe/Copenhagen
 .B n
 The optional number of minutes to modify the time. Default is 0.
 .SH "DESCRIPTION"
-Without any additional input salahtime will display the prayer times without daylight saving time following the Islamic school of thought of Imam Shafi'i (rha).
+Bismillah Ar-Rahman Ar-Raheem.
 
-salahtime does not calculate or display the time of asr by other views because there is a great difference of opinion within the Hanafi school about the time of asr. This is due to the fact that both of Abu Hanifa's (rha) main students, Qadi Abu Yusuf (rha) and Muhammad ibn al-Hasan (rha), held asr to come in at one shadow length, contrary to their teacher's position of two shadow lengths. Hence, Muslims who follow any of these views know what to add to the time of asr when looking at a time table from the Shafi'i school of thought.
+Without any additional input salahtime will display the prayer times without daylight saving time
+following the Islamic school of jurisprudence of Imam Shafi'i (rahimahullah).
+
+salahtime does not calculate or display the time of asr by other views
+because there is a great difference of opinion within the Hanafi school about the time of asr.
+This is due to the fact that both of Abu Hanifa's (rahimahullah) main students -
+Qadi Abu Yusuf (rahimahullah) and Muhammad ibn al-Hasan (rahimahullah),
+held asr to come in at one shadow length, contrary to their teacher's position of two shadow lengths.
+Hence, Muslims who follow any of these views know what to add to the time of asr
+when looking at a time table from the Shafi'i school of jurisprudence.
 
 .nf
 $ salahtime
 
-Date today 01/01-2018
-
+---------------------
+Date today 01-01-2018
+Time right now is: 13:25
 ---------------------
 Fajr:           06:40
 Shuruk:         08:37
@@ -26,8 +36,6 @@ Asr:            13:35
 Maghrib:        15:51
 Isha:           17:41
 ---------------------
-
-Time is now:    13:25
 .fi
 
 You can change to daylight saving time by adding an hour (specified in minutes):
@@ -36,7 +44,8 @@ You can change to daylight saving time by adding an hour (specified in minutes):
 $ salahtime 60
 .fi
 
-If your city isn't Copenhagen, but a city close by like Århus, you can also account for that by adding the extra 9 minutes.
+If your city isn't Copenhagen, but a city close by like Århus,
+you can also account for that by adding the extra 9 minutes.
 
 .nf
 $ salahtime 69
@@ -50,7 +59,9 @@ $ salahtime -5
 
 .SH "NOTE"
 
-If you're using the Bash shell and you want to avoid having to add the number "60" during daylight savings you can create a simple script that will detect daylights savings and then add 60 minutes:
+If you're using the Bash shell and you want to avoid having
+to add the number "60" during daylight savings you can create
+a simple script that will detect daylights savings and then add 60 minutes:
 
 .nf
 # Automatic detection of summer time for salahtime.
